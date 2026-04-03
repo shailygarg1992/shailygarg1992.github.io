@@ -1,1 +1,30 @@
-# shailygarg1992.github.io
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Shaily Garg — Principal PM at Walmart, Forbes 30 Under 30, IIT Bombay. AI-native product leader in last-mile delivery, pricing, and agentic AI.">
+  <title>Shaily Garg — AI-Native Product Leader</title>
+</head>
+<body>
+  <h1>Shaily Garg</h1>
+  <p>Principal Product Manager at Walmart | Forbes 30 Under 30 | IIT Bombay | Founder, GlobalFair</p>
+
+  <h2>About</h2>
+  <p>AI-native product leader with 10+ years in ads, consumer pricing, and last-mile delivery. 
+  Leading Last Mile Pricing & Customer Promise at Walmart — agentic AI systems serving 6.5M+ 
+  customers, delivering $45M in annual savings.</p>
+
+  <h2>Projects</h2>
+  <ul>
+    <li><a href="https://github.com/shailygarg1992/fridgefill">FridgeFill</a> — Smart grocery PWA with fridge scanning & Walmart cart integration</li>
+    <li><a href="https://github.com/shailygarg1992/ai-pm-daily">AI Daily 5</a> — 5-minute daily AI learning app for Product Managers</li>
+  </ul>
+
+  <h2>Connect</h2>
+  <ul>
+    <li><a href="https://github.com/shailygarg1992">GitHub</a></li>
+    <li><a href="https://www.linkedin.com/in/shailygarg">LinkedIn</a></li>
+  </ul>
+</body>
+</html>
