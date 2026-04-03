@@ -1,29 +1,1075 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Shaily Garg — Principal PM at Walmart, Forbes 30 Under 30, IIT Bombay. AI-native product leader in last-mile delivery, pricing, and agentic AI.">
-  <meta name="google-site-verification" content="google6ceb8567ae0f8776.html" />
+  <meta name="description" content="Shaily Garg — Lead PM at Walmart, Forbes 30 Under 30, IIT Bombay alumni. AI-native product leader in last-mile delivery, pricing, and agentic AI. Founder of GlobalFair ($50M ARR exit).">
+  <meta name="keywords" content="Shaily Garg, Product Manager, AI Product, Walmart, GlobalFair, Forbes 30 Under 30, IIT Bombay, Last Mile Delivery, Agentic AI, Pricing">
+  <meta name="author" content="Shaily Garg">
+  <meta property="og:title" content="Shaily Garg — AI-Native Product Leader">
+  <meta property="og:description" content="Lead PM at Walmart | Founder, GlobalFair ($50M ARR) | Forbes 30 Under 30 | IIT Bombay">
+  <meta property="og:url" content="https://shailygarg1992.github.io">
   <title>Shaily Garg — AI-Native Product Leader</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0a0a0f;
+      --surface: #12121a;
+      --surface2: #1a1a26;
+      --accent: #e8c547;
+      --accent2: #ff6b4a;
+      --text: #f0ede8;
+      --text-muted: #8a8a9a;
+      --border: rgba(232, 197, 71, 0.15);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 300;
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    /* Grain overlay */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 1000;
+      opacity: 0.4;
+    }
+
+    /* Nav */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 100;
+      padding: 1.5rem 3rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(10, 10, 15, 0.85);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-logo {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.85rem;
+      color: var(--accent);
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2.5rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.85rem;
+      letter-spacing: 0.05em;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover { color: var(--accent); }
+
+    /* Hero */
+    .hero {
+      min-height: 100vh;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-left {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 8rem 4rem 4rem 6rem;
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-tag {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.75rem;
+      color: var(--accent);
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      margin-bottom: 1.5rem;
+      opacity: 0;
+      animation: fadeUp 0.8s ease forwards 0.2s;
+    }
+
+    .hero-name {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(3.5rem, 6vw, 5.5rem);
+      font-weight: 900;
+      line-height: 1;
+      margin-bottom: 1rem;
+      opacity: 0;
+      animation: fadeUp 0.8s ease forwards 0.4s;
+    }
+
+    .hero-name span {
+      display: block;
+      color: var(--accent);
+      font-style: italic;
+    }
+
+    .hero-title {
+      font-size: 1.1rem;
+      color: var(--text-muted);
+      margin-bottom: 2.5rem;
+      max-width: 480px;
+      opacity: 0;
+      animation: fadeUp 0.8s ease forwards 0.6s;
+    }
+
+    .hero-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-bottom: 3rem;
+      opacity: 0;
+      animation: fadeUp 0.8s ease forwards 0.8s;
+    }
+
+    .badge {
+      padding: 0.4rem 1rem;
+      border: 1px solid var(--border);
+      border-radius: 100px;
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      font-family: 'DM Mono', monospace;
+      letter-spacing: 0.05em;
+      transition: all 0.2s;
+    }
+
+    .badge:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    .badge.highlight {
+      border-color: var(--accent);
+      color: var(--accent);
+      background: rgba(232, 197, 71, 0.08);
+    }
+
+    .hero-cta {
+      display: flex;
+      gap: 1rem;
+      opacity: 0;
+      animation: fadeUp 0.8s ease forwards 1s;
+    }
+
+    .btn {
+      padding: 0.85rem 2rem;
+      border-radius: 4px;
+      font-size: 0.85rem;
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 500;
+      text-decoration: none;
+      transition: all 0.25s;
+      letter-spacing: 0.03em;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: var(--bg);
+    }
+
+    .btn-primary:hover {
+      background: #f0d060;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(232, 197, 71, 0.3);
+    }
+
+    .btn-secondary {
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+    }
+
+    .btn-secondary:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+      transform: translateY(-2px);
+    }
+
+    .hero-right {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hero-visual {
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+
+    /* Animated background orbs */
+    .orb {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(80px);
+      opacity: 0.15;
+      animation: float 8s ease-in-out infinite;
+    }
+
+    .orb-1 {
+      width: 400px;
+      height: 400px;
+      background: var(--accent);
+      top: 20%;
+      right: -10%;
+      animation-delay: 0s;
+    }
+
+    .orb-2 {
+      width: 300px;
+      height: 300px;
+      background: var(--accent2);
+      bottom: 20%;
+      right: 20%;
+      animation-delay: -3s;
+    }
+
+    /* Stats floating card */
+    .stats-card {
+      position: absolute;
+      right: 8%;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(18, 18, 26, 0.9);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 2rem;
+      backdrop-filter: blur(20px);
+      width: 280px;
+      opacity: 0;
+      animation: fadeUp 1s ease forwards 1.2s;
+    }
+
+    .stat-item {
+      padding: 1rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .stat-item:last-child { border-bottom: none; }
+
+    .stat-number {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--accent);
+      line-height: 1;
+    }
+
+    .stat-label {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      margin-top: 0.25rem;
+      letter-spacing: 0.05em;
+    }
+
+    /* Sections */
+    section {
+      padding: 6rem 6rem;
+      position: relative;
+    }
+
+    .section-tag {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.72rem;
+      color: var(--accent);
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 3rem;
+    }
+
+    /* About */
+    .about {
+      background: var(--surface);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 5rem;
+      align-items: start;
+    }
+
+    .about-text p {
+      color: var(--text-muted);
+      margin-bottom: 1.5rem;
+      font-size: 1.05rem;
+    }
+
+    .about-text p strong {
+      color: var(--text);
+      font-weight: 500;
+    }
+
+    .about-personal {
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 2rem;
+    }
+
+    .personal-title {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.72rem;
+      color: var(--accent);
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: 1.5rem;
+    }
+
+    .personal-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      padding: 0.75rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .personal-item:last-child { border-bottom: none; }
+
+    .personal-icon {
+      font-size: 1.2rem;
+      margin-top: 0.1rem;
+      flex-shrink: 0;
+    }
+
+    .personal-text {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    .personal-text strong {
+      display: block;
+      color: var(--text);
+      font-weight: 500;
+      margin-bottom: 0.2rem;
+    }
+
+    /* Experience */
+    .experience { background: var(--bg); }
+
+    .exp-timeline {
+      position: relative;
+      padding-left: 2rem;
+    }
+
+    .exp-timeline::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 1px;
+      background: linear-gradient(to bottom, var(--accent), transparent);
+    }
+
+    .exp-item {
+      position: relative;
+      padding: 0 0 3.5rem 3rem;
+    }
+
+    .exp-item::before {
+      content: '';
+      position: absolute;
+      left: -4px;
+      top: 8px;
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: var(--accent);
+      box-shadow: 0 0 12px var(--accent);
+    }
+
+    .exp-period {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.72rem;
+      color: var(--accent);
+      letter-spacing: 0.1em;
+      margin-bottom: 0.5rem;
+    }
+
+    .exp-role {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin-bottom: 0.25rem;
+    }
+
+    .exp-company {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-bottom: 1rem;
+    }
+
+    .exp-highlights {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .exp-highlights li {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      padding-left: 1.25rem;
+      position: relative;
+    }
+
+    .exp-highlights li::before {
+      content: '→';
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-size: 0.75rem;
+    }
+
+    .exp-highlights li strong { color: var(--text); font-weight: 500; }
+
+    .exp-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 1rem;
+    }
+
+    .exp-tag {
+      padding: 0.25rem 0.75rem;
+      background: rgba(232, 197, 71, 0.08);
+      border: 1px solid rgba(232, 197, 71, 0.2);
+      border-radius: 4px;
+      font-size: 0.72rem;
+      color: var(--accent);
+      font-family: 'DM Mono', monospace;
+    }
+
+    /* Projects */
+    .projects {
+      background: var(--surface);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+    }
+
+    .project-card {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 2rem;
+      text-decoration: none;
+      color: inherit;
+      transition: all 0.3s;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .project-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(232, 197, 71, 0.05), transparent);
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    .project-card:hover {
+      border-color: rgba(232, 197, 71, 0.4);
+      transform: translateY(-4px);
+      box-shadow: 0 16px 40px rgba(0,0,0,0.4);
+    }
+
+    .project-card:hover::before { opacity: 1; }
+
+    .project-status {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.68rem;
+      color: var(--accent2);
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+
+    .project-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+    }
+
+    .project-desc {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-bottom: 1.5rem;
+      line-height: 1.6;
+    }
+
+    .project-link {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.75rem;
+      color: var(--accent);
+      letter-spacing: 0.1em;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    /* Skills */
+    .skills { background: var(--bg); }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+
+    .skill-group {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.75rem;
+    }
+
+    .skill-group-title {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.72rem;
+      color: var(--accent);
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: 1.25rem;
+    }
+
+    .skill-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+
+    .skill-list li {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      padding-left: 1rem;
+      position: relative;
+    }
+
+    .skill-list li::before {
+      content: '·';
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+    }
+
+    /* Achievements */
+    .achievements {
+      background: var(--surface);
+      border-top: 1px solid var(--border);
+    }
+
+    .achievements-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+    }
+
+    .achievement-card {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.75rem;
+      text-align: center;
+      transition: all 0.3s;
+    }
+
+    .achievement-card:hover {
+      border-color: rgba(232, 197, 71, 0.3);
+      transform: translateY(-3px);
+    }
+
+    .achievement-icon {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .achievement-value {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--accent);
+      line-height: 1;
+      margin-bottom: 0.5rem;
+    }
+
+    .achievement-label {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      line-height: 1.4;
+    }
+
+    /* Connect */
+    .connect {
+      background: var(--bg);
+      text-align: center;
+      padding: 6rem;
+    }
+
+    .connect .section-title {
+      margin-bottom: 1rem;
+    }
+
+    .connect-sub {
+      color: var(--text-muted);
+      font-size: 1rem;
+      margin-bottom: 3rem;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .connect-links {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    /* Footer */
+    footer {
+      padding: 2rem 6rem;
+      border-top: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    footer p {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      font-family: 'DM Mono', monospace;
+    }
+
+    /* Animations */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0) scale(1); }
+      50% { transform: translateY(-30px) scale(1.05); }
+    }
+
+    /* Scroll animations */
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      nav { padding: 1.25rem 2rem; }
+      .nav-links { gap: 1.5rem; }
+      .hero { grid-template-columns: 1fr; }
+      .hero-left { padding: 7rem 2rem 2rem; }
+      .hero-right { display: none; }
+      section { padding: 4rem 2rem; }
+      .about-grid { grid-template-columns: 1fr; gap: 2rem; }
+      .projects-grid { grid-template-columns: 1fr; }
+      .skills-grid { grid-template-columns: 1fr 1fr; }
+      .achievements-grid { grid-template-columns: 1fr 1fr; }
+      .connect { padding: 4rem 2rem; }
+      footer { padding: 2rem; flex-direction: column; gap: 0.5rem; text-align: center; }
+    }
+  </style>
 </head>
 <body>
-  <h1>Shaily Garg</h1>
-  <p>Principal Product Manager at Walmart | Forbes 30 Under 30 | IIT Bombay | Founder, GlobalFair</p>
 
-  <h2>About</h2>
-  <p>AI-native product leader with 10+ years in ads, consumer pricing, and last-mile delivery. Leading Last Mile Pricing & Customer Promise at Walmart — agentic AI systems serving 6.5M+ customers, delivering $45M in annual savings.</p>
+  <!-- Nav -->
+  <nav>
+    <div class="nav-logo">Shaily Garg</div>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#connect">Connect</a></li>
+    </ul>
+  </nav>
 
-  <h2>Projects</h2>
-  <ul>
-    <li><a href="https://github.com/shailygarg1992/fridgefill">FridgeFill</a> — Smart grocery PWA with fridge scanning & Walmart cart integration</li>
-    <li><a href="https://github.com/shailygarg1992/ai-pm-daily">AI Daily 5</a> — 5-minute daily AI learning app for Product Managers</li>
-  </ul>
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-left">
+      <div class="hero-tag">Lead PM · Founder · Forbes 30U30</div>
+      <h1 class="hero-name">
+        Shaily
+        <span>Garg.</span>
+      </h1>
+      <p class="hero-title">
+        AI-native product leader building at the intersection of machine learning, pricing, and last-mile delivery. Lead PM at Walmart. Previously founded and exited GlobalFair at $50M ARR.
+      </p>
+      <div class="hero-badges">
+        <span class="badge highlight">Forbes 30 Under 30</span>
+        <span class="badge">IIT Bombay</span>
+        <span class="badge">Agentic AI</span>
+        <span class="badge">Last-Mile Delivery</span>
+        <span class="badge">Dynamic Pricing</span>
+      </div>
+      <div class="hero-cta">
+        <a href="https://www.linkedin.com/in/shailygarg/" class="btn btn-primary" target="_blank">LinkedIn →</a>
+        <a href="https://github.com/shailygarg1992" class="btn btn-secondary" target="_blank">GitHub</a>
+      </div>
+    </div>
+    <div class="hero-right">
+      <div class="hero-visual">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="stats-card">
+          <div class="stat-item">
+            <div class="stat-number">$45M</div>
+            <div class="stat-label">Annual savings delivered at Walmart</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">$50M</div>
+            <div class="stat-label">ARR at GlobalFair exit</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">6.5M+</div>
+            <div class="stat-label">Customers served across 3 countries</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">10+</div>
+            <div class="stat-label">Years in product leadership</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <h2>Connect</h2>
-  <ul>
-    <li><a href="https://github.com/shailygarg1992">GitHub</a></li>
-    <li><a href="https://www.linkedin.com/in/shailygarg">LinkedIn</a></li>
-  </ul>
+  <!-- About -->
+  <section class="about" id="about">
+    <div class="about-grid">
+      <div class="about-text reveal">
+        <div class="section-tag">About</div>
+        <h2 class="section-title">Builder. Founder.<br>Product Leader.</h2>
+        <p>
+          I'm a product leader who has spent a decade doing one thing: <strong>building systems that scale</strong>. From launching AI-powered marketplaces to leading agentic delivery models at Walmart, I work at the intersection of product intuition, applied ML, and operational excellence.
+        </p>
+        <p>
+          At <strong>Walmart</strong>, I lead Last Mile Pricing & Customer Promise as Lead PM — building agentic AI systems with 30+ engineers and data scientists that serve 6.5M+ customers across the US, Canada, Chile, and Mexico, delivering $45M in annual savings while maintaining 97% on-time delivery.
+        </p>
+        <p>
+          Before Walmart, I founded <strong>GlobalFair</strong> — a cross-border B2B marketplace for building materials. We built a three-sided marketplace (buyers ↔ suppliers ↔ logistics), scaled to $50M ARR, achieved 300% YoY growth and 93% customer retention, and were acquired in 2024.
+        </p>
+        <p>
+          I'm an <strong>IIT Bombay</strong> alumna and a <strong>Forbes 30 Under 30</strong> honoree (2022) for AI-driven startup innovation. Currently building two AI-native side projects on nights and weekends.
+        </p>
+      </div>
+      <div class="about-personal reveal">
+        <div class="personal-title">Beyond Work</div>
+        <div class="personal-item">
+          <div class="personal-icon">🏀</div>
+          <div class="personal-text">
+            <strong>Basketball</strong>
+            Court IQ translates directly to product thinking — reading the game, making fast decisions, trusting your team.
+          </div>
+        </div>
+        <div class="personal-item">
+          <div class="personal-icon">🥊</div>
+          <div class="personal-text">
+            <strong>Muay Thai</strong>
+            Eight limbs, infinite patience. Training teaches you to stay calm under pressure — a skill that comes in handy in any board room.
+          </div>
+        </div>
+        <div class="personal-item">
+          <div class="personal-icon">🎓</div>
+          <div class="personal-text">
+            <strong>IIT Bombay Alumni</strong>
+            Where I learned to think in systems, not just solutions.
+          </div>
+        </div>
+        <div class="personal-item">
+          <div class="personal-icon">🌏</div>
+          <div class="personal-text">
+            <strong>Global operator</strong>
+            Built products across India, US, Canada, Chile & Mexico. Culture shapes product — always.
+          </div>
+        </div>
+        <div class="personal-item">
+          <div class="personal-icon">🎙️</div>
+          <div class="personal-text">
+            <strong>Audio-first learner</strong>
+            Commute = learning time. Currently obsessed with agentic AI and what comes after LLMs.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section class="experience" id="experience">
+    <div class="reveal">
+      <div class="section-tag">Experience</div>
+      <h2 class="section-title">A decade of<br>building at scale.</h2>
+    </div>
+    <div class="exp-timeline">
+      <div class="exp-item reveal">
+        <div class="exp-period">2025 — Present</div>
+        <div class="exp-role">Lead Product Manager</div>
+        <div class="exp-company">Walmart · Last Mile Pricing & Customer Promise</div>
+        <ul class="exp-highlights">
+          <li>Leading AI and agentic systems for last-mile pricing & delivery across US, Canada, Chile & Mexico — <strong>$45M annual savings, 97% OTD</strong> across 6.5M customers.</li>
+        </ul>
+        <div class="exp-tags">
+          <span class="exp-tag">Agentic AI</span>
+          <span class="exp-tag">Dynamic Pricing</span>
+          <span class="exp-tag">Last-Mile</span>
+          <span class="exp-tag">ML</span>
+          <span class="exp-tag">A/B Testing</span>
+        </div>
+      </div>
+
+      <div class="exp-item reveal">
+        <div class="exp-period">2020 — 2025</div>
+        <div class="exp-role">Founder & Chief Product Officer</div>
+        <div class="exp-company">GlobalFair · Cross-border B2B Marketplace · Exited at $50M ARR</div>
+        <ul class="exp-highlights">
+          <li>Built a three-sided marketplace from zero to acquisition — <strong>300% YoY growth, 93% retention, profitable exit in 2024</strong>. Named Forbes 30 Under 30 (2022).</li>
+        </ul>
+        <div class="exp-tags">
+          <span class="exp-tag">Marketplace</span>
+          <span class="exp-tag">Pricing Systems</span>
+          <span class="exp-tag">B2B</span>
+          <span class="exp-tag">Founder</span>
+        </div>
+      </div>
+
+      <div class="exp-item reveal">
+        <div class="exp-period">2016 — 2019</div>
+        <div class="exp-role">Senior Product Manager, Operations</div>
+        <div class="exp-company">Procter & Gamble · North India Site</div>
+        <ul class="exp-highlights">
+          <li>Built AI-assisted operational systems for India's largest P&G site — <strong>$50M inventory reduction, 43% productivity gain</strong> via predictive analytics and automation.</li>
+        </ul>
+        <div class="exp-tags">
+          <span class="exp-tag">Predictive Analytics</span>
+          <span class="exp-tag">Operations</span>
+          <span class="exp-tag">Automation</span>
+        </div>
+      </div>
+
+      <div class="exp-item reveal">
+        <div class="exp-period">2015 — 2016</div>
+        <div class="exp-role">Product Manager, Analytics</div>
+        <div class="exp-company">TransUnion</div>
+        <ul class="exp-highlights">
+          <li>Built a data-driven risk platform on credit data from <strong>400M borrowers</strong>, improving approval accuracy by 15% and generating +$200K annual revenue.</li>
+        </ul>
+        <div class="exp-tags">
+          <span class="exp-tag">Analytics</span>
+          <span class="exp-tag">Risk Models</span>
+          <span class="exp-tag">FinTech</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section class="projects" id="projects">
+    <div class="reveal">
+      <div class="section-tag">Side Projects</div>
+      <h2 class="section-title">Building in public.</h2>
+    </div>
+    <div class="projects-grid">
+      <a href="https://github.com/shailygarg1992/fridgefill" class="project-card reveal" target="_blank">
+        <div class="project-status">🟡 In Development</div>
+        <div class="project-name">FridgeFill</div>
+        <p class="project-desc">
+          A smart grocery PWA that scans your fridge, learns your household's eating patterns, and automatically fills your Walmart cart — right up to the $35 free delivery threshold. Built with AI vision, Firebase, and a Chrome extension for seamless cart integration.
+        </p>
+        <div class="project-link">View on GitHub →</div>
+      </a>
+      <a href="https://github.com/shailygarg1992/ai-pm-daily" class="project-card reveal" target="_blank">
+        <div class="project-status">🟡 In Development</div>
+        <div class="project-name">AI Daily 5</div>
+        <p class="project-desc">
+          A 5-minute daily AI learning app built for Product Managers on the go. Audio-first briefings, daily quizzes, real-world analogies, and adaptive content — designed for commutes. Because staying sharp on AI shouldn't require a PhD.
+        </p>
+        <div class="project-link">View on GitHub →</div>
+      </a>
+      <a href="https://github.com/shailygarg1992" class="project-card reveal" target="_blank">
+        <div class="project-status">🟡 In Development</div>
+        <div class="project-name">PM Dashboard</div>
+        <p class="project-desc">
+          An AI-powered personal dashboard for product managers — tracks KPIs, surfaces insights from Slack and Jira, drafts weekly updates, and keeps your roadmap honest. Built for the PM who hates busywork.
+        </p>
+        <div class="project-link">View on GitHub →</div>
+      </a>
+      <a href="https://github.com/shailygarg1992" class="project-card reveal" target="_blank">
+        <div class="project-status">🟡 In Development</div>
+        <div class="project-name">FamilyGrow</div>
+        <p class="project-desc">
+          A family milestone and growth tracking app powered by AI — logs developmental milestones, surfaces personalized activity suggestions, and builds a living memory book. Because the best moments shouldn't live only in your camera roll.
+        </p>
+        <div class="project-link">View on GitHub →</div>
+      </a>
+      <a href="https://github.com/shailygarg1992" class="project-card reveal" target="_blank">
+        <div class="project-status">🟡 In Development</div>
+        <div class="project-name">FitnessFriend</div>
+        <p class="project-desc">
+          An AI fitness companion that adapts to your schedule, not the other way around. Combines Muay Thai drills, basketball conditioning, and recovery — personalized daily based on sleep, energy, and calendar. No gym required.
+        </p>
+        <div class="project-link">View on GitHub →</div>
+      </a>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section class="skills">
+    <div class="reveal">
+      <div class="section-tag">Skills</div>
+      <h2 class="section-title">What I bring<br>to the table.</h2>
+    </div>
+    <div class="skills-grid">
+      <div class="skill-group reveal">
+        <div class="skill-group-title">AI & ML</div>
+        <ul class="skill-list">
+          <li>Applied Machine Learning</li>
+          <li>Prompt Engineering</li>
+          <li>Agentic AI Systems</li>
+          <li>AI Safety & Ethics</li>
+          <li>API Product Development</li>
+        </ul>
+      </div>
+      <div class="skill-group reveal">
+        <div class="skill-group-title">Product</div>
+        <ul class="skill-list">
+          <li>A/B & Multivariate Testing</li>
+          <li>Roadmap Strategy</li>
+          <li>Marketplace Systems</li>
+          <li>Dynamic Pricing</li>
+          <li>Go-to-Market</li>
+        </ul>
+      </div>
+      <div class="skill-group reveal">
+        <div class="skill-group-title">Domain</div>
+        <ul class="skill-list">
+          <li>Last-Mile Delivery & ETA</li>
+          <li>Consumer Pricing</li>
+          <li>B2B & B2C Platforms</li>
+          <li>Cross-border Logistics</li>
+          <li>Risk & Analytics</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Achievements -->
+  <section class="achievements">
+    <div class="reveal">
+      <div class="section-tag">By the numbers</div>
+      <h2 class="section-title">Impact that compounds.</h2>
+    </div>
+    <div class="achievements-grid">
+      <div class="achievement-card reveal">
+        <div class="achievement-icon">🏆</div>
+        <div class="achievement-value">Forbes</div>
+        <div class="achievement-label">30 Under 30, 2022<br>AI-driven startup innovation</div>
+      </div>
+      <div class="achievement-card reveal">
+        <div class="achievement-icon">📦</div>
+        <div class="achievement-value">97%</div>
+        <div class="achievement-label">On-time delivery rate<br>across 6.5M customers</div>
+      </div>
+      <div class="achievement-card reveal">
+        <div class="achievement-icon">🚀</div>
+        <div class="achievement-value">300%</div>
+        <div class="achievement-label">YoY growth at GlobalFair<br>93% customer retention</div>
+      </div>
+      <div class="achievement-card reveal">
+        <div class="achievement-icon">🎓</div>
+        <div class="achievement-value">IIT</div>
+        <div class="achievement-label">Bombay alumna<br>B.Tech Engineering</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Connect -->
+  <section class="connect" id="connect">
+    <div class="section-tag">Get in touch</div>
+    <h2 class="section-title reveal">Let's build something.</h2>
+    <p class="connect-sub reveal">Open to conversations about AI-native product roles, last-mile innovation, agentic systems, and marketplace strategy.</p>
+    <div class="connect-links reveal">
+      <a href="https://www.linkedin.com/in/shailygarg/" class="btn btn-primary" target="_blank">LinkedIn →</a>
+      <a href="https://github.com/shailygarg1992" class="btn btn-secondary" target="_blank">GitHub</a>
+      <a href="mailto:garg.shaily92@gmail.com" class="btn btn-secondary">Email</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2026 Shaily Garg</p>
+    <p>shailygarg1992.github.io</p>
+  </footer>
+
+  <script>
+    // Scroll reveal
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
+
 </body>
 </html>
